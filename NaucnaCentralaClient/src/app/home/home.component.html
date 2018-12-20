@@ -1,0 +1,5 @@
+<section>
+  <h1 class="main__header">Odaberite casopis</h1>
+  <app-casopis class= "body-content__wrapper" *ngFor="let c of casopisi" [casopis]="c" (kupiClicked)="onKupiClick($event)">
+  </app-casopis>
+</section>

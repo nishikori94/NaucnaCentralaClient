@@ -3,8 +3,7 @@ import { Casopis, PaymentMethod } from '../home.service';
 
 @Component({
   selector: 'app-casopis',
-  templateUrl: './casopis.component.html',
-  styleUrls: ['./casopis.component.css']
+  templateUrl: './casopis.component.html'
 })
 export class CasopisComponent implements OnInit {
 

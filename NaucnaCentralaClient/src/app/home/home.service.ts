@@ -31,13 +31,13 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   getPaymentMethods(): Observable<PaymentMethod[]> {
-    return this.http.get<PaymentMethod[]>(`http://localhost:9091/placanje/tipoviPlacanja/2`);
+    return this.http.get<PaymentMethod[]>(`https://localhost:9091/placanje/tipoviPlacanja/2`);
   }
   getAllCasopisi(): Observable<Casopis[]> {
-    return this.http.get<Casopis[]>(`http://localhost:9095/casopis/getAllCasopisi`);
+    return this.http.get<Casopis[]>(`https://localhost:9095/casopis/getAllCasopisi`);
   }
 
   kupiCasopis(id: number): Observable<UrlResponse>{
-    return this.http.get<UrlResponse>(`http://localhost:9095/casopis/sacuvajPorudzbinu/`+id)
+    return this.http.get<UrlResponse>(`https://localhost:9095/casopis/sacuvajPorudzbinu/`+id)
   }
 }

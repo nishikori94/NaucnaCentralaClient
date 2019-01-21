@@ -30,9 +30,6 @@ export class HomeService {
   
   constructor(private http: HttpClient) { }
 
-  getPaymentMethods(): Observable<PaymentMethod[]> {
-    return this.http.get<PaymentMethod[]>(`https://localhost:9091/placanje/tipoviPlacanja/2`);
-  }
   getAllCasopisi(): Observable<Casopis[]> {
     return this.http.get<Casopis[]>(`https://localhost:9095/casopis/getAllCasopisi`);
   }

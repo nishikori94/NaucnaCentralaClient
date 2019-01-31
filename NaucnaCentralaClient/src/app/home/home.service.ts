@@ -22,6 +22,14 @@ export interface Casopis {
   cena: string;
 }
 
+export interface Rad {
+  id: number;
+  naziv: string;
+  nazivAutora: string;
+  casopis: Casopis;
+  cena: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -34,7 +42,15 @@ export class HomeService {
     return this.http.get<Casopis[]>(`https://localhost:9095/casopis/getAllCasopisi`);
   }
 
+  getRadovi(id: number): Observable<Rad[]> {
+    return this.http.get<Rad[]>(`https://localhost:9095/rad/getRadoviByCasopisId/`+id);
+  }
+
   kupiCasopis(id: number): Observable<UrlResponse>{
-    return this.http.get<UrlResponse>(`https://localhost:9095/casopis/sacuvajPorudzbinu/`+id)
+    return this.http.get<UrlResponse>(`https://localhost:9095/casopis/sacuvajPorudzbinu/`+id);
+  }
+
+  kupiRad(rad: Rad): Observable<UrlResponse>{
+    return this.http.get<UrlResponse>(`https://localhost:9095/rad/sacuvajPorudzbinu/`+ rad.id);
   }
 }

@@ -1,3 +1,13 @@
-<div class = "left_section">{{ casopis?.naziv}}
-  <button (click)="onKupiClick()">Kupi</button>
-</div>
+
+  <div class="row m-2">
+    <div class="col-4">
+      <p style="font-weight: bold;">{{ casopis?.naziv}}</p>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-primary" (click)="onKupiClick()">Kupi</button>
+    </div>
+    <div class="col-3">
+      <button type="button" class="btn btn-primary" (click)="prikaziRadove()">Prikazi radove</button>
+    </div>
+  </div>
+

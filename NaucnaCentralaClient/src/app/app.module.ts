@@ -6,15 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CasopisComponent } from './home/casopis/casopis.component';
+import { RadComponent } from './home/rad/rad.component';
 import { HomeService } from './home/home.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CasopisComponent
+    CasopisComponent,
+    RadComponent
   ],
   imports: [
     BrowserModule,

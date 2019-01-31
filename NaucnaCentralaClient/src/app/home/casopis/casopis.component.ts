@@ -12,6 +12,9 @@ export class CasopisComponent implements OnInit {
 
   @Output()
   kupiClicked: EventEmitter<number> = new EventEmitter(null);
+
+  @Output()
+  prikaziRadoveClicked: EventEmitter<number> = new EventEmitter(null);
   
   constructor() { }
 
@@ -21,5 +24,10 @@ export class CasopisComponent implements OnInit {
   onKupiClick() {
     this.kupiClicked.emit(this.casopis.id);
   }
+
+  prikaziRadove(){
+    this.prikaziRadoveClicked.emit(this.casopis.id);
+  }
+
 
 }
